@@ -34,11 +34,11 @@ class CompleteSearch {
   }
 
   public void subSetFind(int[] set){
-    int n = (1 << set.length);
+    int n = set.length
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < (1 << n); i++){
 
-      for(int j = 0; j < 32; j++){
+      for(int j = 0; j < n; j++){
         if((i & (1 << j)) != 0){
           print(set[j]);
         }
